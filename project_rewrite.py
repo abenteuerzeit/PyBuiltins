@@ -1,5 +1,5 @@
 def min(x, y):
-    pass
+    return y if x < y else x
 
 
 def max(values_list):
@@ -20,3 +20,8 @@ def pow(x, y):
 
 def divmod(x, y):
     pass
+
+
+if __name__ == "__main__":
+    result = min(10, -5)
+    print(result)
