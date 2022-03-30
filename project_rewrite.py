@@ -1,6 +1,3 @@
-from multiprocessing.dummy import Value
-
-
 def min(x, y):
     return y if x < y else x
 
@@ -43,13 +40,3 @@ def divmod(x, y):
         x = x - y
         count += 1
     return count, x
-
-
-
-if __name__ == "__main__":
-    x = 3
-    y = 6
-    print(x // y, x % y)
-    result = divmod(x, y)
-    print(result)
-    
