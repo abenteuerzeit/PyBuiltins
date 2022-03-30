@@ -1,3 +1,6 @@
+from multiprocessing.dummy import Value
+
+
 def min(x, y):
     return y if x < y else x
 
@@ -25,14 +28,28 @@ def multiply(x, y):
     if y < 0:
         return -multiply(x, -y)
 
+
 def pow(x, y):
-    pass
+    result = 1
+    for i in range(y):
+        result *= x
+    return result
 
 
 def divmod(x, y):
-    pass
+    # doesn't work with negative values
+    count = 0
+    while x >= y:
+        x = x - y
+        count += 1
+    return count, x
+
 
 
 if __name__ == "__main__":
-    result = multiply(3,4)
+    x = 3
+    y = 6
+    print(x // y, x % y)
+    result = divmod(x, y)
     print(result)
+    
