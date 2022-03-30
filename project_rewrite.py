@@ -18,8 +18,12 @@ def len(values_list):
 
 
 def multiply(x, y):
-    pass
-
+    if y == 0:
+        return 0
+    if y > 0:
+        return x + multiply(x, y-1)
+    if y < 0:
+        return -multiply(x, -y)
 
 def pow(x, y):
     pass
@@ -30,5 +34,5 @@ def divmod(x, y):
 
 
 if __name__ == "__main__":
-    result = len([-100, 10, -5, 88, 41, 0, -53, 100, 82.5, 100.1, 75])
+    result = multiply(3,4)
     print(result)
