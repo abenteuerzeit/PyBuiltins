@@ -11,7 +11,10 @@ def max(values_list):
 
 
 def len(values_list):
-    pass
+    count = 0
+    for item in values_list:
+        count += 1
+    return count
 
 
 def multiply(x, y):
@@ -27,5 +30,5 @@ def divmod(x, y):
 
 
 if __name__ == "__main__":
-    result = max([-100, 10, -5, 88, 41, 0, -53, 100, 82.5, 100.1, 75])
+    result = len([-100, 10, -5, 88, 41, 0, -53, 100, 82.5, 100.1, 75])
     print(result)
