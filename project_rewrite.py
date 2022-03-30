@@ -3,7 +3,11 @@ def min(x, y):
 
 
 def max(values_list):
-    pass
+    max = values_list[0]
+    for value in values_list:
+        if value > max:
+            max = value
+    return max
 
 
 def len(values_list):
@@ -23,5 +27,5 @@ def divmod(x, y):
 
 
 if __name__ == "__main__":
-    result = min(10, -5)
+    result = max([-100, 10, -5, 88, 41, 0, -53, 100, 82.5, 100.1, 75])
     print(result)
