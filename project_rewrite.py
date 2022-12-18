@@ -1,8 +1,8 @@
-def min(x, y):
-    return y if x < y else x
+def min_func(x, y):
+    return x if x < y else y
 
 
-def max(values_list):
+def max_func(values_list):
     max = values_list[0]
     for value in values_list:
         if value > max:
@@ -10,7 +10,7 @@ def max(values_list):
     return max
 
 
-def len(values_list):
+def length(values_list):
     count = 0
     for item in values_list:
         count += 1
@@ -26,14 +26,14 @@ def multiply(x, y):
         return -multiply(x, -y)
 
 
-def pow(x, y):
+def power(x, y):
     result = 1
     for i in range(y):
         result *= x
     return result
 
 
-def divmod(x, y):
+def div_mod(x, y):
     # doesn't work with negative values
     count = 0
     while x >= y:
