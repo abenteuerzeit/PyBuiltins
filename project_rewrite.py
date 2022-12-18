@@ -34,9 +34,18 @@ def power(x, y):
 
 
 def div_mod(x, y):
-    # doesn't work with negative values
+    if y == 0:
+        raise ValueError("Cannot divide by zero")
+
+    if x == 0:
+        return 0, 0
+
+    is_negative = (x < 0) != (y < 0)
+    x, y = abs(x), abs(y)
+
     count = 0
     while x >= y:
-        x = x - y
+        x -= y
         count += 1
-    return count, x
+
+    return -count if is_negative else count, x
